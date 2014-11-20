@@ -55,9 +55,9 @@ public OnPluginStart()
 	// Create console variables
 	CreateConVar("sm_csgo_skins_version", PLUGIN_VERSION, PLUGIN_NAME, FCVAR_NOTIFY|FCVAR_DONTRECORD);
 	sc_enable     = CreateConVar("sm_csgo_skins_enable",  "1", "Whether or not enable CS:GO Skins Chooser plugin",                                   FCVAR_PLUGIN, true, 0.0, true, 1.0);
-	sc_random     = CreateConVar("sm_csgo_skins_random",  "1", "Whether or not randomly change models for all players on every respawn\n2 = Once",   FCVAR_PLUGIN, true, 0.0, true, 2.0);
-	sc_changetype = CreateConVar("sm_csgo_skins_change",  "0", "Determines when change selected player skin:\n0 = On next respawn\n1 = Immediately", FCVAR_PLUGIN, true, 0.0, true, 1.0);
-	sc_admflag    = CreateConVar("sm_csgo_skins_admflag", "",  "If flag is specified (a-z), only admins with that flag will able to use skins menu", FCVAR_PLUGIN);
+	sc_random     = CreateConVar("sm_csgo_skins_random",  "0", "Whether or not randomly change models for all players on every respawn\n2 = Once",   FCVAR_PLUGIN, true, 0.0, true, 2.0);
+	sc_changetype = CreateConVar("sm_csgo_skins_change",  "1", "Determines when change selected player skin:\n0 = On next respawn\n1 = Immediately", FCVAR_PLUGIN, true, 0.0, true, 1.0);
+	sc_admflag    = CreateConVar("sm_csgo_skins_admflag", "a",  "If flag is specified (a-z), only admins with that flag will able to use skins menu", FCVAR_PLUGIN);
 
 	// Create/register client commands to setup player skins
 	RegConsoleCmd("sm_skin",  Command_SkinsMenu);
